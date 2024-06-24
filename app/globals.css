@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg); 
+    }
+  }
+  
+  .loading-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    height: 100vh;
+    animation: rotateAnimation 2s linear infinite; 
+    z-index: inherit;
+  }
+  
+
+  .c-shadow{
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
