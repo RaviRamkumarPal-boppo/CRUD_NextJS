@@ -46,6 +46,11 @@ const Sidebar = () => {
     }
   }, []);
 
+  const handleLogout = () =>{
+    localStorage.removeItem("credentials");
+    localStorage.removeItem("user");
+  }
+ 
   if (loading) {
     return (
       <div className="loading-tag">
@@ -57,7 +62,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="sidebar fixed top-0 bottom-0 p-2 overflow-y-auto text-center bg-gray-900 transition-transform duration-300">
+      <div className="sidebar h-screen top-0 bottom-0 p-2 overflow-y-auto text-center bg-gray-900 transition-transform duration-300">
         <div className="text-gray-100 text-4xl">
           <div
             className="p-2.5 mt-1 flex items-center"
@@ -95,7 +100,7 @@ const Sidebar = () => {
         <div className="my-4 bg-gray-600 h-[1px]"></div>
         <div
           className="p-2.5 mt-3 flex items-center rounded-md px-4 text-2xl duration-300 cursor-pointer hover:bg-blue-600 text-white"
-          onClick={() => setIsLoginOpen(true)}
+          onClick={() => credit ? handleLogout : setIsLoginOpen(true)}
         >
           {credit ? <BiLogOut /> : <MdLogin />}
           <span className="text-[15px] ml-4 text-gray-200 font-bold">

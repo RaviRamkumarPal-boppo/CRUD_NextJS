@@ -14,8 +14,8 @@ const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [filterValue, setFilterValue] = useState("");
   const [loading, setLoading] = useState(true);
- const router = useRouter();
- const pathname = usePathname()
+  const router = useRouter();
+  const pathname = usePathname()
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,7 +47,7 @@ const Products = () => {
   }
 
   return (
-    <div className="p-4 bg-sky-100">
+    <div className="p-4 bg-sky-100 ">
       <div className="p-2 flex justify-between items-center mb-2 shadow">
         <p className="text-2xl font-bold">Products</p>
 

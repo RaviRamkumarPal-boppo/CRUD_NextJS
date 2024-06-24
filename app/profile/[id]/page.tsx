@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { User } from "@/app/components/Interface/page";
 import Loading from "@/app/components/modules/loading";
 
-const Profile = ({ params }: { params: { id: number } }) => {
+const Profile = ({ params }: { params: { id: number }}) => {
   const [user, setUser] = useState<User | null>(null);
   const [userData, setUserData] = useState({
     email: "",
